@@ -1,0 +1,15 @@
+  body.light-mode {
+    --dark: #F4F3EF;
+    --dark2: #ECEAE4;
+    --dark3: #E4E2DC;
+    --dark4: #D8D5CC;
+    --border: rgba(150,120,50,0.2);
+    --border-bright: rgba(150,120,50,0.45);
+    --text: #1A1A18;
+    --text-dim: #4A4840;
+    --text-muted: #888070;
+  }
+  body.light-mode .hero { background: var(--dark); }
+  body.light-mode .nav-tabs { background: var(--dark2); }
+  body.light-mode ::-webkit-scrollbar-track { background: var(--dark); }
+  body.light-mode ::-webkit-scrollbar-thumb { background: var(--dark4); }

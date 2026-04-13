@@ -1,0 +1,98 @@
+<!-- ═══ MODAL: QUICK TRADE ENTRY ════════════════════════════════════ -->
+<div id="modalQuickTrade" class="modal-overlay" onclick="closeModalOutside(event,'modalQuickTrade')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('modalQuickTrade')">✕</button>
+    <div class="modal-title">Entry Trade Cepat</div>
+    <div class="modal-sub">Simpan trade langsung ke Journal</div>
+    <div class="modal-form">
+      <div class="modal-field">
+        <label>Symbol</label>
+        <input type="text" id="qt-symbol" placeholder="EURUSD" maxlength="12">
+      </div>
+      <div class="modal-field">
+        <label>Side</label>
+        <select id="qt-side">
+          <option value="long">📈 LONG / BUY</option>
+          <option value="short">📉 SHORT / SELL</option>
+        </select>
+      </div>
+      <div class="modal-field">
+        <label>Entry Price</label>
+        <input type="number" id="qt-entry" placeholder="1.0950" step="any">
+      </div>
+      <div class="modal-field">
+        <label>Stop Loss</label>
+        <input type="number" id="qt-sl" placeholder="1.0900" step="any">
+      </div>
+      <div class="modal-field">
+        <label>Take Profit</label>
+        <input type="number" id="qt-tp" placeholder="1.1050" step="any">
+      </div>
+      <div class="modal-field">
+        <label>R:R Ratio</label>
+        <input type="number" id="qt-rr" placeholder="2" step="0.1" min="0.1">
+      </div>
+      <div class="modal-field">
+        <label>Result</label>
+        <select id="qt-result">
+          <option value="pending">⏳ Pending</option>
+          <option value="win">✅ WIN</option>
+          <option value="loss">❌ LOSS</option>
+        </select>
+      </div>
+      <div class="modal-field modal-form-full">
+        <label>Note (opsional)</label>
+        <textarea id="qt-note" rows="2" placeholder="Catatan singkat setup ICT…"></textarea>
+      </div>
+    </div>
+    <button class="modal-save-btn" onclick="quickTradeSave()">💾 Save Trade</button>
+  </div>
+</div>
+
+<!-- ═══ MODAL: DAILY BIAS HELPER ════════════════════════════════════ -->
+<div id="modalDailyBias" class="modal-overlay" onclick="closeModalOutside(event,'modalDailyBias')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('modalDailyBias')">✕</button>
+    <div class="modal-title">Daily Bias Helper</div>
+    <div class="modal-sub">Analisis kondisi market saat ini</div>
+    <div id="biasContent">
+      <div style="text-align:center;color:var(--text-muted);font-family:'DM Mono',monospace;font-size:12px;padding:20px;">
+        Menganalisis…
+      </div>
+    </div>
+    <button class="modal-save-btn" onclick="closeModal('modalDailyBias')" style="margin-top:12px;">Tutup</button>
+  </div>
+</div>
+
+<!-- ═══ MODAL: FAQ ══════════════════════════════════════════════════ -->
+<div id="modalFAQ" class="modal-overlay" onclick="closeModalOutside(event,'modalFAQ')">
+  <div class="modal-box" style="max-width:600px;">
+    <button class="modal-close" onclick="closeModal('modalFAQ')">✕</button>
+    <div class="modal-title">FAQ & Panduan Cepat</div>
+    <div class="modal-sub">Pertanyaan umum seputar ICT</div>
+    <div id="faqList"></div>
+  </div>
+</div>
+
+<div class="hero">
+  <div class="hero-badge">Complete Trading Methodology <span class="v14-badge">v14.1.5</span></div>
+  <h1>ICT <span>Masterclass</span></h1>
+  <p class="hero-sub">Inner Circle Trader — Smart Money Concepts</p>
+  <div style="display:flex;flex-direction:column;gap:10px;align-items:center;">
+    <div class="hero-creator">
+      <div class="creator-avatar">MH</div>
+      <div class="creator-info">
+        <div class="creator-name">Michael J. Huddleston</div>
+        <div class="creator-title">Founder of ICT · @InnerCircleTrader · YouTube Educator</div>
+      </div>
+    </div>
+    <div class="hero-creator" style="border-color:rgba(201,168,76,0.25);background:var(--dark2);">
+      <div class="creator-avatar" style="background:linear-gradient(135deg,#1e3a5f,#2e6da4);font-size:13px;">RS</div>
+      <div class="creator-info">
+        <div class="creator-name" style="font-size:13px;">Rizky Saputra</div>
+        <div class="creator-title">Developer & Kurator HTML Masterclass ini · ICT SMC Researcher</div>
+      </div>
+    </div>
+  </div>
+</div>
+

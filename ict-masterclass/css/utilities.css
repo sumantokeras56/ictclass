@@ -1,0 +1,93 @@
+  /* ─── SCROLLBAR ─────────────────────────────────────────────────── */
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: var(--dark); }
+  ::-webkit-scrollbar-thumb { background: var(--dark4); border-radius: 3px; }
+
+  /* ─── BACK TO TOP ────────────────────────────────────────────────── */
+  #backToTop {
+    position: fixed; bottom: 28px; right: 28px; z-index: 999;
+    width: 42px; height: 42px; border-radius: 50%;
+    background: var(--dark3); border: 1px solid var(--border-bright);
+    color: var(--gold); font-size: 18px; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0; transition: opacity 0.3s, background 0.2s;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+  }
+  #backToTop:hover { background: var(--dark4); }
+
+  /* ─── THEME TOGGLE (moved to sidebar in v14.1.2) ────────────────── */
+  #themeToggle { display: none !important; }
+
+  /* ─── EXPORT / SHARE BUTTONS ────────────────────────────────────── */
+  .action-btn {
+    background: transparent; border: 1px solid var(--border);
+    color: var(--text-muted); padding: 8px 16px;
+    font-family: 'DM Mono', monospace; font-size: 11px;
+    letter-spacing: 1px; text-transform: uppercase;
+    cursor: pointer; border-radius: 4px; transition: all 0.2s;
+  }
+  .action-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+
+  /* ─── GLOSSARY TOOLTIPS ─────────────────────────────────────────── */
+  .glossary-term {
+    border-bottom: 1px dashed var(--gold-dim);
+    cursor: help; position: relative; display: inline;
+  }
+  .glossary-tip {
+    display: none; position: absolute; bottom: calc(100% + 6px); left: 50%;
+    transform: translateX(-50%); background: var(--dark4);
+    border: 1px solid var(--border-bright); border-radius: 4px;
+    padding: 7px 12px; font-size: 12px; color: var(--text);
+    white-space: nowrap; z-index: 200; pointer-events: none;
+    font-family: 'DM Sans', sans-serif; font-weight: 400;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+    max-width: 260px; white-space: normal; text-align: left;
+  }
+  .glossary-tip::after {
+    content: ''; position: absolute; top: 100%; left: 50%;
+    transform: translateX(-50%); border: 5px solid transparent;
+    border-top-color: var(--border-bright);
+  }
+  .glossary-term:hover .glossary-tip,
+  .glossary-term:focus .glossary-tip { display: block; }
+
+  /* ─── PRINT STYLES (untuk export checklist) ─────────────────────── */
+  @media print {
+    body { background: white !important; color: black !important; }
+    .checklist-wrapper { background: white !important; border: 1px solid #ccc !important; }
+    .check-item.checked .check-text { color: #999 !important; }
+    .check-text { color: #111 !important; }
+    .check-note { color: #666 !important; }
+    .pill, .pill-gold, .pill-green, .pill-red, .pill-blue {
+      border-color: #ccc !important; color: #333 !important; background: #f5f5f5 !important;
+    }
+    #backToTop, #themeToggle, .nav-tabs, .hero { display: none !important; }
+  }
+
+
+  body.light-mode {
+    --dark: #F4F3EF;
+    --dark2: #ECEAE4;
+    --dark3: #E4E2DC;
+    --dark4: #D8D5CC;
+    --border: rgba(150,120,50,0.2);
+    --border-bright: rgba(150,120,50,0.45);
+    --text: #1A1A18;
+    --text-dim: #4A4840;
+    --text-muted: #888070;
+  }
+  body.light-mode .hero { background: var(--dark); }
+  body.light-mode .nav-tabs { background: var(--dark2); }
+  body.light-mode ::-webkit-scrollbar-track { background: var(--dark); }
+  body.light-mode ::-webkit-scrollbar-thumb { background: var(--dark4); }
+  /* ─── RESPONSIVE ─────────────────────────────────────────────────── */
+  @media (max-width: 600px) {
+    .two-col { grid-template-columns: 1fr; }
+    .calc-grid { grid-template-columns: 1fr; }
+    .result-grid { grid-template-columns: 1fr; }
+    .container { padding: 32px 20px; }
+    .hero { padding: 40px 20px 32px; }
+    .nav-tabs { padding: 0 20px; }
+    .help-grid { grid-template-columns: 1fr; }
+  }
+

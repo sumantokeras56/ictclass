@@ -1,0 +1,48 @@
+<!-- LIVE CLOCK BAR -->
+<div class="clock-bar">
+  <div class="clock-item">
+    <div class="clock-dot" style="background:var(--gold);"></div>
+    <span class="clock-label">UTC–4 NY</span>
+    <span class="clock-time" id="clock-ny">--:--:--</span>
+    <span class="clock-date" id="date-ny"></span>
+  </div>
+  <div class="clock-item">
+    <div class="clock-dot" style="background:var(--blue);"></div>
+    <span class="clock-label">UTC+0 London</span>
+    <span class="clock-time" id="clock-lon">--:--:--</span>
+  </div>
+  <div class="clock-item">
+    <div class="clock-dot" style="background:var(--purple);"></div>
+    <span class="clock-label">UTC+7 WIB</span>
+    <span class="clock-time" id="clock-wib">--:--:--</span>
+  </div>
+  <div class="clock-item">
+    <div class="clock-dot" style="background:var(--green);"></div>
+    <span class="clock-label">COT</span>
+    <span class="clock-time" id="cot-countdown" style="color:var(--gold);">--</span>
+  </div>
+  <div class="clock-item" style="margin-left:auto;gap:10px;">
+    <span class="clock-label">SESSION</span>
+    <span class="clock-time" id="session-label" style="color:var(--text-muted);">–</span>
+  </div>
+</div>
+
+<!-- NAV TABS -->
+<nav class="nav-tabs" role="tablist">
+  <div class="nav-tab active" role="tab" tabindex="0" aria-selected="true" onclick="showTab('foundational',this)" onkeydown="if(event.key==='Enter'||event.key===' ')showTab('foundational',this)">00 · Ajaran Pertama</div>
+  <div class="nav-tab" role="tab" tabindex="0" aria-selected="false" onclick="showTab('overview',this)" onkeydown="if(event.key==='Enter'||event.key===' ')showTab('overview',this)">01 · Overview</div>
+  <div class="nav-tab" role="tab" tabindex="0" aria-selected="false" onclick="showTab('structure',this)" onkeydown="if(event.key==='Enter'||event.key===' ')showTab('structure',this)">Market Structure</div>
+  <div class="nav-tab" role="tab" tabindex="0" aria-selected="false" onclick="showTab('pd-arrays',this)" onkeydown="if(event.key==='Enter'||event.key===' ')showTab('pd-arrays',this)">PD Arrays</div>
+  <div class="nav-tab" role="tab" tabindex="0" aria-selected="false" onclick="showTab('amd',this)" onkeydown="if(event.key==='Enter'||event.key===' ')showTab('amd',this)">AMD Cycle</div>
+  <div class="nav-tab" role="tab" tabindex="0" aria-selected="false" onclick="showTab('killzones',this)" onkeydown="if(event.key==='Enter'||event.key===' ')showTab('killzones',this)">Kill Zones</div>
+  <div class="nav-tab" role="tab" tabindex="0" aria-selected="false" onclick="showTab('liquidity',this)" onkeydown="if(event.key==='Enter'||event.key===' ')showTab('liquidity',this)">Liquidity</div>
+  <div class="nav-tab" role="tab" tabindex="0" aria-selected="false" onclick="showTab('8am-strategy',this)" onkeydown="if(event.key==='Enter'||event.key===' ')showTab('8am-strategy',this)">8AM Strategy</div>
+  <div class="nav-tab" role="tab" tabindex="0" aria-selected="false" onclick="showTab('models',this)" onkeydown="if(event.key==='Enter'||event.key===' ')showTab('models',this)">ICT Models</div>
+  <div class="nav-tab" role="tab" tabindex="0" aria-selected="false" onclick="showTab('checklist',this)" onkeydown="if(event.key==='Enter'||event.key===' ')showTab('checklist',this)">Checklist</div>
+  <div class="nav-tab" role="tab" tabindex="0" aria-selected="false" onclick="showTab('calculator',this)" onkeydown="if(event.key==='Enter'||event.key===' ')showTab('calculator',this)">Kalkulator RR</div>
+  <div class="nav-tab" role="tab" tabindex="0" aria-selected="false" onclick="showTab('glossary',this)" onkeydown="if(event.key==='Enter'||event.key===' ')showTab('glossary',this)">Glossary</div>
+  <div class="nav-tab" role="tab" tabindex="0" aria-selected="false" onclick="showTab('cot',this)" onkeydown="if(event.key==='Enter'||event.key===' ')showTab('cot',this)">COT Analyzer</div>
+  <div class="nav-tab" role="tab" tabindex="0" aria-selected="false" onclick="showTab('journal',this)" onkeydown="if(event.key==='Enter'||event.key===' ')showTab('journal',this)">Trading Journal</div>
+  <div class="nav-tab" role="tab" tabindex="0" aria-selected="false" onclick="showTab('calendar',this)" onkeydown="if(event.key==='Enter'||event.key===' ')showTab('calendar',this)">Calendar & Hours</div>
+</nav>
+
