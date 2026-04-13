@@ -1,0 +1,32 @@
+  :root {
+    --gold: #C9A84C;
+    --gold-dim: #8A6E30;
+    --gold-glow: #F0D07A;
+    --dark: #0A0A0B;
+    --dark2: #111114;
+    --dark3: #18181D;
+    --dark4: #222228;
+    --border: rgba(201,168,76,0.18);
+    --border-bright: rgba(201,168,76,0.45);
+    --text: #E8E6DF;
+    --text-dim: #9A9890;
+    --text-muted: #5A5856;
+    --green: #2ECC71;
+    --red: #E74C3C;
+    --blue: #5B9BD5;
+    --purple: #9B59B6;
+    --orange: #E67E22;
+    --cyan: #1ABC9C;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--dark);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+    min-height: 100vh;
+  }
+

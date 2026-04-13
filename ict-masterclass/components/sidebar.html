@@ -1,0 +1,113 @@
+<!-- ═══ SIDEBAR ═══════════════════════════════════════════════════ -->
+<aside id="sidebar" role="navigation" aria-label="Sidebar Navigation">
+
+  <!-- Header -->
+  <div class="sb-header">
+    <div class="sb-logo">ICT <span>Masterclass</span></div>
+    <span class="sb-version">v14.1.5</span>
+    <div class="sb-tagline">Inner Circle Trader · SMC</div>
+  </div>
+
+  <!-- Section 1: Controls -->
+  <div class="sb-section">
+    <div class="sb-section-title">Kontrol</div>
+
+    <!-- Dark/Light Toggle -->
+    <div class="sb-row">
+      <span class="sb-row-icon">🌓</span>
+      <span class="sb-row-label">Mode Gelap / Terang</span>
+      <label class="sb-toggle" title="Toggle tema">
+        <input type="checkbox" id="themeToggleSB" onchange="toggleTheme()">
+        <span class="sb-toggle-track"></span>
+      </label>
+    </div>
+
+    <!-- Browser Notification Button -->
+    <div class="sb-row" style="flex-direction:column;align-items:flex-start;gap:6px;">
+      <div style="display:flex;align-items:center;gap:8px;width:100%;">
+        <span class="sb-row-icon">🔔</span>
+        <span class="sb-row-label">Notifikasi Sesi</span>
+        <span id="notifStatusBadge" style="margin-left:auto;font-size:9px;font-family:'DM Mono',monospace;padding:2px 6px;border-radius:3px;background:var(--dark4);color:var(--text-muted);">OFF</span>
+      </div>
+      <button id="notifEnableBtn" onclick="requestNotificationPermission()" style="width:100%;background:var(--dark4);border:1px solid var(--border);color:var(--text-dim);padding:7px 10px;border-radius:6px;cursor:pointer;font-size:11px;font-family:'DM Mono',monospace;letter-spacing:0.5px;text-align:left;transition:all 0.15s;">🔔 Aktifkan Notifikasi</button>
+    </div>
+  </div>
+
+  <!-- Section 2: Quick Actions -->
+  <div class="sb-section">
+    <div class="sb-section-title">Aksi Cepat</div>
+    <button class="sb-btn-primary" onclick="openModal('modalQuickTrade')">
+      <span>📝</span> <span>Entry Trade Cepat</span>
+    </button>
+    <button class="sb-btn-primary" onclick="showDailyBiasModal()">
+      <span>🧠</span> <span>Daily Bias Helper</span>
+    </button>
+  </div>
+
+  <!-- Section 3: Navigate -->
+  <div class="sb-section">
+    <div class="sb-section-title">Navigasi</div>
+    <button class="sb-btn" onclick="goToTab('journal')">
+      <span class="sb-btn-icon">📊</span>
+      <span>Statistik Journal</span>
+    </button>
+    <button class="sb-btn" onclick="goToTab('calendar')">
+      <span class="sb-btn-icon">📅</span>
+      <span>Event Mendatang</span>
+    </button>
+    <button class="sb-btn" onclick="goToTab('checklist')">
+      <span class="sb-btn-icon">✅</span>
+      <span>Trade Checklist</span>
+    </button>
+    <button class="sb-btn" onclick="goToTab('cot')">
+      <span class="sb-btn-icon">📈</span>
+      <span>COT Analyzer</span>
+    </button>
+    <button class="sb-btn" onclick="goToTab('calculator')">
+      <span class="sb-btn-icon">🧮</span>
+      <span>Kalkulator RR</span>
+    </button>
+  </div>
+
+  <!-- Section 4: Help -->
+  <div class="sb-section">
+    <div class="sb-section-title">Panduan</div>
+    <button class="sb-btn" onclick="openModal('modalFAQ')">
+      <span class="sb-btn-icon">❓</span>
+      <span>FAQ & Panduan Cepat</span>
+    </button>
+  </div>
+
+  <!-- Section 5: Quick Links -->
+  <div class="sb-section">
+    <div class="sb-section-title">Tautan Cepat</div>
+    <button class="sb-btn" onclick="window.open('https://youtube.com/@InnerCircleTrader','_blank')">
+      <span class="sb-btn-icon">🎥</span>
+      <span>ICT YouTube</span>
+    </button>
+    <button class="sb-btn" onclick="window.open('https://discord.gg/innerCircleTrader','_blank')">
+      <span class="sb-btn-icon">💬</span>
+      <span>Discord Community</span>
+    </button>
+    <button class="sb-btn" onclick="exportChecklist()">
+      <span class="sb-btn-icon">📄</span>
+      <span>Export Checklist PDF</span>
+    </button>
+    <button class="sb-btn" onclick="exportJournalCSV()">
+      <span class="sb-btn-icon">📊</span>
+      <span>Export Journal CSV</span>
+    </button>
+    <button class="sb-btn" onclick="exportCOTResults()">
+      <span class="sb-btn-icon">📑</span>
+      <span>Export COT PDF</span>
+    </button>
+    <button class="sb-btn" onclick="scrollToFooter()">
+      <span class="sb-btn-icon">ℹ️</span>
+      <span>Tentang</span>
+    </button>
+  </div>
+
+  <!-- Footer -->
+  <div class="sb-footer">© 2026 · Rizky Saputra · ICT Masterclass</div>
+</aside>
+
